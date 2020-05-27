@@ -35,7 +35,7 @@ class Application
     if @@items.include?(search_term)
       @@cart << search_term
     else
-      return "Couldn't find #{search_term}"
+      return "We don't have that item"
     end
   end
 end
