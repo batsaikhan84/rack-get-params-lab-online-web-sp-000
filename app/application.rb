@@ -21,8 +21,8 @@ class Application
       end
       
     elsif req.path.match(/add/)
-      search_term = req.params["item"]
-      if @@items.include?(search_term)
+      param = req.params["item"]
+      if @@items.include?(param)
         @@cart << search_term
       else
         resp.write "We don't have that item"
